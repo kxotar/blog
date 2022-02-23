@@ -13,10 +13,12 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+    @user_types = Article::USER_TYPES
   end
 
   # GET /articles/1/edit
   def edit
+    @user_types = Article::USER_TYPES
   end
 
   # POST /articles or /articles.json
